@@ -1,7 +1,7 @@
 # ${data.title}
 
 ## [Badges](#table-of-contents)
-![${data.license}](https://img.shields.io/github/license/jsalexan/congenial-journey)
+[![License:${data.license}](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
 <br><br>
 ## Description
 ${data.descr-what}
@@ -31,7 +31,7 @@ There you will find following file types :
 ${data.file-names}
 <br><br>
 ## [Usage](#table-of-contents)
-The website (link above) was created to be used on \${data.devices}.
+The website (link above) was created to be used on ${data.devices}.
 ![Screen capture.](\${data.img-path})
 <br><br>
 ## [Credits](#table-of-contents) 
