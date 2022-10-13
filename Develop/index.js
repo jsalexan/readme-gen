@@ -104,13 +104,13 @@ inquirer
     { 
       type: 'input',
       name: 'imgPath',
-      message: 'If you would like to add a screenshot, please enter the pathway to the image file here. Please surround the path with parentheses. Ex: (./assets/password-generator-screenshot.png)',
+      message: 'If you would like to add a screenshot, please enter the pathway to the image file here. You can find a URL hosted image by opening an issue in GitHub and then dragging/dropping an image in it. Use the code it creates, including parentheses, as the input here. Ex:(https://user-images.githubusercontent.com/110498167/195725023-dd3ff021-8f78-43c8-a087-9e48bb705d01.png)',
     },
     { 
       type: 'checkbox',
       name: 'devices',
       message: 'This application will operate on the following devices.',
-      choices: [' desktop', ' tablet', ' mobile']
+      choices: ['- desktop', '- tablet', '- mobile']
     },
     { 
       type: 'input',
@@ -154,7 +154,7 @@ There you will find following file types :
 ${data.fileNames}
 <br><br>
 ## [Usage](#table-of-contents)
-The website (link above) was created to be used on the following devices: ${data.devices}.
+The website (link above) was created to be used on the following devices: ${data.devices}.<br>
 ![Screen capture.]${data.imgPath}
 <br><br>
 ## [Credits](#table-of-contents) 
@@ -162,7 +162,7 @@ ${data.collaborators}
 <br><br>
 **Third Party References and Tutorials used include:** 
 <br>
-> -${data.links}
+![Resources](${data.links})
 <br><br>
 ## [License](#table-of-contents)
 ${data.license} Copyright ${data.year}, ${data.name}
