@@ -1,6 +1,6 @@
 // TODO: Look up the names and addresses of the other licenses. 
 // TODO: Figure out how to include resource links.
-// TODO: Test to see if image works.
+
 // TODO: Look into init() requirement.
 
 const inquirer = require('inquirer');
@@ -23,7 +23,7 @@ inquirer
       type: 'rawlist',
       name: 'license',
       message: 'Please choose your license for this application.',
-      choices: ['MIT', 'Apache 2.0', 'GPL', 'GBD', 'BSD','ISC']
+      choices: ['MIT', 'Apache_2.0', 'GPL_v2', 'BSD_3', 'ISC']
     },
     {
       type: 'input',
@@ -104,13 +104,13 @@ inquirer
     { 
       type: 'input',
       name: 'imgPath',
-      message: 'If you would like to add a screenshot, please enter the pathway to the image file here. You can find a URL hosted image by opening an issue in GitHub and then dragging/dropping an image in it. Use the code it creates, including parentheses, as the input here. Ex:(https://user-images.githubusercontent.com/110498167/195725023-dd3ff021-8f78-43c8-a087-9e48bb705d01.png)',
+      message: 'If you would like to add a screenshot, please follow these instructions. You can create a link to a URL image by opening an issue in GitHub and then dragging/dropping an image in it. Use the code it creates, including parentheses, as the input here. Ex:(https://user-images.githubusercontent.com/110498167/195725023-dd3ff021-8f78-43c8-a087-9e48bb705d01.png)',
     },
     { 
       type: 'checkbox',
       name: 'devices',
       message: 'This application will operate on the following devices.',
-      choices: ['- desktop', '- tablet', '- mobile']
+      choices: ['* desktop', '* tablet', '* mobile']
     },
     { 
       type: 'input',
@@ -119,64 +119,9 @@ inquirer
     },
   ])
 
-  .then((data) => {
-    const generateMarkdown = `
-# ${data.title}
+  // .then((data) => {
+  //   const generateMarkdown = `
 
-## [Badges](#table-of-contents)
-[![License:${data.license}](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
-<br><br>
-## Description
-${data.descrWhat}
-<br>
-For my application, I used the following technologies: ${data.descrTech}
-<br>
-${data.descrChallenges}
-<br>
-${data.descrFuture}
-<br><br>
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-- [Badges](#badges)
-- [How to Contribute](#how-to-contribute)
-- [Tests](#tests)
-- [Questions](#questions)
-<br><br>
-## [Installation](#table-of-contents)
-The website is hosted by GitHub pages. <br>
-You can find it here: [Link to ${data.title}](${data.url}/)
-<br><br>
-The repository is on GitHub: [Link to GitHub repository for ${data.title}.](https://github.com/${data.GHusername}/${data.repoName}) <br>
-There you will find following file types : 
-${data.fileNames}
-<br><br>
-## [Usage](#table-of-contents)
-The website (link above) was created to be used on the following devices: ${data.devices}.<br>
-![Screen capture.]${data.imgPath}
-<br><br>
-## [Credits](#table-of-contents) 
-${data.collaborators}
-<br><br>
-**Third Party References and Tutorials used include:** 
-<br>
-![Resources](${data.links})
-<br><br>
-## [License](#table-of-contents)
-${data.license} Copyright ${data.year}, ${data.name}
-<br><br>
-## [How to Contribute](#table-of-contents)
-${data.contribute
-}
-<br><br>
-## [Tests](#table-of-contents)
-${data.tests}
-<br><br>
-## [Questions](#table-of-contents)
-If you have any questions or comments, you can contact ${data.name} at ${data.email} or visit my profile at [GitHub](https://github.com/${data.GHusername}/).
-`
 
 fs.writeFile(`${data.title}.md`, generateMarkdown, (err) =>
       err ? console.log(err) : console.log('Success!')
