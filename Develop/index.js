@@ -5,6 +5,7 @@
 
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('Develop/utils/generateMarkdown.js');
 
 
 inquirer
@@ -23,7 +24,7 @@ inquirer
       type: 'rawlist',
       name: 'license',
       message: 'Please choose your license for this application.',
-      choices: ['MIT', 'Apache_2.0', 'GPL_v2', 'BSD_3', 'ISC']
+      choices: ['MIT', 'Apache_2.0', 'GPL_v2', 'BSD_3', 'ISC', 'none']
     },
     {
       type: 'input',
