@@ -53,3 +53,12 @@ ${data.tests}
 <br><br>
 ## [Questions](#table-of-contents)
 If you have any questions or comments, you can contact ${data.name} at ${data.email} or visit my GitHub at (https://github.com/${data.GHusername}/)
+
+
+
+
+<!-- HOLD: // // TODO: Create a function to initialize app
+// function init() {}
+
+// // Function call to initialize app
+// init(); -->

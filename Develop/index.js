@@ -120,16 +120,10 @@ inquirer
     },
   ])
 
-  // .then((data) => {
-  //   const generateMarkdown = `
+  .then((data) => {
+    const markdownContent = generateMarkdown(data);
 
-
-fs.writeFile(`${data.title}.md`, generateMarkdown, (err) =>
-      err ? console.log(err) : console.log('Success!')
+    fs.writeFile(`${data.title}.md`, markdownContent, (err) =>
+      err ? console.log(err) : console.log('Successfully created markdown!')
     );
   });
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
