@@ -1,15 +1,13 @@
 // TODO: Look up the names and addresses of the other licenses. 
 // TODO: Figure out how to include resource links.
 
-// TODO: Look into init() requirement.
+
 
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('Develop/utils/generateMarkdown.js');
+const generateMarkdown = require('./utils/generateMarkdown');
 
-
-inquirer
-  .prompt([
+const questions = [
     {
       type: 'input',
       name: 'name',
@@ -24,7 +22,7 @@ inquirer
       type: 'rawlist',
       name: 'license',
       message: 'Please choose your license for this application.',
-      choices: ['MIT', 'Apache_2.0', 'GPL_v2', 'BSD_3', 'ISC', 'none']
+      choices: ['MIT', 'Apache_2.0', 'GPL_v2', 'BSD_3', 'ISC']
     },
     {
       type: 'input',
@@ -118,12 +116,25 @@ inquirer
       name: 'year',
       message: 'What is the current year?',
     },
-  ])
+  ];
 
-  .then((data) => {
-    const markdownContent = generateMarkdown(data);
+function writeToFile(fileName, data) {
+    fs.appendFile(`${data.title}.md`, data, 
+    (err) => err ? console.error(err) : console.log(`Success! Your README file is ready!`))
+}
 
-    fs.writeFile(`${data.title}.md`, markdownContent, (err) =>
-      err ? console.log(err) : console.log('Successfully created markdown!')
-    );
-  });
+const init = () => {
+  return inquirer.prompt(questions);
+}   
+
+init()
+.then(userInput => {
+    return generateMarkdown(userInput);
+})
+.then(readmeData => {
+    return writeToFile(readmeData);
+})
+.catch(err => {
+    console.log(err);
+})
+

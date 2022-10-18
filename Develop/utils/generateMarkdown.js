@@ -1,3 +1,4 @@
+const fs = require('fs');
 
 // Function that adds a license badge. If there is no license, returns an empty string.
 function renderLicenseBadge(license) {
@@ -46,7 +47,7 @@ function generateMarkdown(data) {
   # ${data.title}
 
   ## [Badges](#table-of-contents)
-  ${renderLicenseBadge(data.license)};
+  ${renderLicenseBadge};
   <br><br>
 
   ## Description
@@ -94,7 +95,7 @@ function generateMarkdown(data) {
   <br><br>
 
   ${renderLicenseSection(data.license)}
-  
+
   ## [How to Contribute](#table-of-contents)
   ${data.contribute
   }
