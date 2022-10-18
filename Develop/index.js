@@ -118,8 +118,8 @@ const questions = [
     },
   ];
 
-function writeToFile(fileName, data) {
-    fs.appendFile(`${data.title}.md`, data, 
+function writeToFile(data) {
+    fs.appendFile(`./dist/myREADME.md`, data, 
     (err) => err ? console.error(err) : console.log(`Success! Your README file is ready!`))
 };
 
@@ -128,8 +128,8 @@ const init = () => {
 };  
 
 init()
-.then(userInput => {
-    return generateMarkdown(userInput);
+.then(data => {
+    return generateMarkdown(data);
 })
 .then(readmeData => {
     return writeToFile(readmeData);

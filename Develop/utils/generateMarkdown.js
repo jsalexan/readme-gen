@@ -1,22 +1,23 @@
 const fs = require('fs');
 
+
 // Function that adds a license badge. If there is no license, returns an empty string.
 function renderLicenseBadge(license) {
   if (license != 'none')
-  return `![badge](https://img.shields.io/badge/license-${data.license}-blue)`;
+  return `![badge](https://img.shields.io/badge/license-${license}-blue)`;
   else {
-    return ``;
+    return '';
   }
 }
 
 // Function that adds a license information link. If there is no license, returns an empty string.
 function renderLicenseLink(license) {
   if (license != 'none')
-  return `[${data.license}](https://opensource.org/licenses/${data.license})`;
+  return `[${license}](https://opensource.org/licenses/${license})`;
   else {
     return ``;
   }
-}
+ }
 
 // Function that adds a license category to the Table of Contents. If there is no license, returns an empty string.
 function renderLicenseTOCLink(license) {
@@ -28,12 +29,12 @@ function renderLicenseTOCLink(license) {
 }
 
 // Function that adds a license section to the README. If there is no license, returns an empty string.
-function renderLicenseSection(license) {
-  if (license != 'none')
+function renderLicenseSection(data) {
+  if (data.license != 'none')
   return `
   ## [License](#table-of-contents)
   ${data.license} Copyright ${data.year}, ${data.name}
-  ${renderLicenseLink(date.license)};
+  ${renderLicenseLink(data.license)};
   <br><br>
   `;
   else {
@@ -43,11 +44,12 @@ function renderLicenseSection(license) {
 
 // Function generates the markdown for the README.
 function generateMarkdown(data) {
+  console.log(data);
   return `
   # ${data.title}
 
   ## [Badges](#table-of-contents)
-  ${renderLicenseBadge};
+  ${renderLicenseBadge(data.license)};
   <br><br>
 
   ## Description
@@ -64,7 +66,7 @@ function generateMarkdown(data) {
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
- ${renderLicenseTOCLink}
+ ${renderLicenseTOCLink(data.license)}
   - [Badges](#badges)
   - [How to Contribute](#how-to-contribute)
   - [Tests](#tests)
