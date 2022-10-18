@@ -121,11 +121,11 @@ const questions = [
 function writeToFile(fileName, data) {
     fs.appendFile(`${data.title}.md`, data, 
     (err) => err ? console.error(err) : console.log(`Success! Your README file is ready!`))
-}
+};
 
 const init = () => {
   return inquirer.prompt(questions);
-}   
+};  
 
 init()
 .then(userInput => {
@@ -136,5 +136,5 @@ init()
 })
 .catch(err => {
     console.log(err);
-})
+});
 
