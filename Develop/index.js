@@ -32,7 +32,7 @@ const questions = [
     {
       type: 'input',
       name: 'descrTech',
-      message: 'What technologies did you use for this project?'
+      message: 'Please list the various technologies used in creating your application.'
     },
     {
       type: 'input',
@@ -62,7 +62,7 @@ const questions = [
     { 
       type: 'input',
       name: 'links',
-      message: 'If you used any third party tutorials or links, please enter the list of links here. Please separate each link with a comma.',
+      message: 'If you used any third party tutorials or links, please enter the list of links here.',
     },
     { 
       type: 'input',
