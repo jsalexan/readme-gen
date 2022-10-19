@@ -1,7 +1,9 @@
+// These are the requirements to run this application. 
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
+// These are the questions that the user will be prompted to answer.
 const questions = [
     {
       type: 'input',
@@ -113,15 +115,18 @@ const questions = [
     },
   ];
 
+// This is the function that creates the README file using the data input from the user. You'll get a Success or Error depending on how it goes.
 function writeToFile(data) {
     fs.writeFile(`./dist/myREADME.md`, data, 
     (err) => err ? console.error(err) : console.log(`Success! Your README file is ready!`))
 };
 
+// This is the function to initialize the application and begin the prompts.
 const init = () => {
   return inquirer.prompt(questions);
 };  
 
+// The init function is run, the generateMarkdown function is run, and then the writeToFile function is run. There's a catch in case of error.
 init()
 .then(data => {
     return generateMarkdown(data);

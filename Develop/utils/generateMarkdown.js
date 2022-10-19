@@ -41,7 +41,7 @@ function renderLicenseSection(data) {
   }
 }
 
-// Function that adds a Badge section to the README. If there is no license, returns an empty string.
+// Function that adds a Badge section to the top of the README. If there is no license, returns an empty string. This could be refit if there were other types of badges used down the road.
 function renderBadgeSection(data) {
   if (data.license != 'none')
   return `
@@ -122,7 +122,6 @@ ${renderBadgeSection(data)}
 
   ## [Questions](#table-of-contents)
   If you have any questions or comments, please contact <br>${data.name} at ${data.email} <br>or visit my profile at [GitHub](https://github.com/${data.GHusername}/).
-
   `;
 }
 
