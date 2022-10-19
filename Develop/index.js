@@ -62,7 +62,7 @@ const questions = [
     { 
       type: 'input',
       name: 'links',
-      message: 'If you used any third party tutorials or links, please enter the list of links here.',
+      message: 'If you used any third party tutorials or links, please enter each complete link address enclosed in parentheses, i.e.(https://www.google.com).If you are adding more than one, please follow each with a <br>',
     },
     { 
       type: 'input',

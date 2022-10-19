@@ -4,7 +4,7 @@ const fs = require('fs');
 // Function that adds a license badge. If there is no license, returns an empty string.
 function renderLicenseBadge(license) {
   if (license != 'none')
-  return `![badge](https://img.shields.io/badge/license-${license}-blue)`;
+  return `![badge](https://img.shields.io/badge/license-${license}-blue)`
   else {
     return '';
   }
@@ -22,7 +22,7 @@ function renderLicenseLink(license) {
 // Function that adds a license category to the Table of Contents. If there is no license, returns an empty string.
 function renderLicenseTOCLink(license) {
   if (license != 'none')
-  return ` - [License](#license)`;
+  return ` - [License](#license)`
   else {
     return ``;
   }
@@ -34,7 +34,7 @@ function renderLicenseSection(data) {
   return `
   ## [License](#table-of-contents)
   **${data.license}** Copyright ${data.year}, ${data.name}<br>
-  ${renderLicenseLink(data.license)};
+  ${renderLicenseLink(data.license)}
   <br><br>
   `;
   else {
@@ -92,10 +92,12 @@ ${renderBadgeSection(data)}
   There you will find following file types: 
   ${data.fileNames}.
   <br><br>
+  ${data.installation} <br><br>
 
 ## [Usage](#table-of-contents)
   The website (link above) was created to be used on the following devices:<br> 
   ${data.devices}.<br><br>
+  ${data.usage}<br><br>
 
   ![Screen capture.]${data.imgPath}
   <br><br>
@@ -121,6 +123,7 @@ ${renderBadgeSection(data)}
 
   ## [Questions](#table-of-contents)
   If you have any questions or comments, please contact <br>${data.name} at ${data.email} <br>or visit my profile at [GitHub](https://github.com/${data.GHusername}/).
+
   `;
 }
 
