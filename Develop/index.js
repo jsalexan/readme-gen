@@ -22,7 +22,7 @@ const questions = [
       type: 'rawlist',
       name: 'license',
       message: 'Please choose your license for this application.',
-      choices: ['MIT', 'Apache_2.0', 'GPL_v2', 'BSD_3', 'ISC']
+      choices: ['MIT', 'Apache_2.0', 'GPL_v2', 'BSD_3', 'ISC', 'none']
     },
     {
       type: 'input',
@@ -109,7 +109,7 @@ const questions = [
       type: 'checkbox',
       name: 'devices',
       message: 'This application will operate on the following devices.',
-      choices: ['* desktop', '* tablet', '* mobile']
+      choices: ['- desktop', '- tablet', '- mobile']
     },
     { 
       type: 'input',
@@ -119,7 +119,7 @@ const questions = [
   ];
 
 function writeToFile(data) {
-    fs.appendFile(`./dist/myREADME.md`, data, 
+    fs.writeFile(`./dist/myREADME.md`, data, 
     (err) => err ? console.error(err) : console.log(`Success! Your README file is ready!`))
 };
 
