@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
 // Function that adds a license information link. If there is no license, returns an empty string.
 function renderLicenseLink(license) {
   if (license != 'none')
-  return `[${license}](https://opensource.org/licenses/${license})`;
+  return `[Information about your ${license} license.](https://opensource.org/licenses/${license})`
   else {
     return ``;
   }
@@ -33,8 +33,21 @@ function renderLicenseSection(data) {
   if (data.license != 'none')
   return `
   ## [License](#table-of-contents)
-  ${data.license} Copyright ${data.year}, ${data.name}
+  **${data.license}** Copyright ${data.year}, ${data.name}<br>
   ${renderLicenseLink(data.license)};
+  <br><br>
+  `;
+  else {
+    return ``;
+  }
+}
+
+// Function that adds a Badge section to the README. If there is no license, returns an empty string.
+function renderBadgeSection(data) {
+  if (data.license != 'none')
+  return `
+  ## Badges
+  ${renderLicenseBadge(data.license)}
   <br><br>
   `;
   else {
@@ -48,24 +61,20 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
 
-// TODO: Test the other badge types. So far so good!
-  ## [Badges](#table-of-contents)
-  ${renderLicenseBadge(data.license)}
-  <br><br>
+${renderBadgeSection(data)}
 
   ## Description
-  ${data.descrWhat}
+  ${data.descrGeneral}
   <br>
-// TODO: Update the text below to give the user further instructions.
-  For my application, I used the following technologies: ${data.descrTech}
+
+  For my application, I used the following technologies: ${data.descrTech}.
   <br><br>
   ${data.descrChallenges}
   <br><br>
   ${data.descrFuture}
   <br><br>
 
-// TODO: Try running this code without a license and see what happens. 
-  ## Table of Contents
+## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
@@ -84,10 +93,9 @@ function generateMarkdown(data) {
   ${data.fileNames}.
   <br><br>
 
-// TODO: Sigh. How do I get these list items working. I think you need some more formatting code. 
-  ## [Usage](#table-of-contents)
+## [Usage](#table-of-contents)
   The website (link above) was created to be used on the following devices:<br> 
-  ${data.devices}<br><br>
+  ${data.devices}.<br><br>
 
   ![Screen capture.]${data.imgPath}
   <br><br>
@@ -95,13 +103,12 @@ function generateMarkdown(data) {
   ## [Credits](#table-of-contents) 
   ${data.collaborators}
   <br><br>
-// TODO: Now the 3rd party link is just a resource link. Rethink how this might present better.
+
   **Third Party References and Tutorials used include:** 
   <br>
-// TODO: This isn't working. Go over the code to see why.
   (${data.links})
   <br><br>
-// TODO: Figure out the correct links for the license info. The BSD one is def wrong.
+
   ${renderLicenseSection(data)}
 
   ## [How to Contribute](#table-of-contents)
@@ -113,7 +120,7 @@ function generateMarkdown(data) {
   <br><br>
 
   ## [Questions](#table-of-contents)
-  If you have any questions or comments, you can contact <br>${data.name} at ${data.email} <br>or visit my profile at [GitHub](https://github.com/${data.GHusername}/).
+  If you have any questions or comments, please contact <br>${data.name} at ${data.email} <br>or visit my profile at [GitHub](https://github.com/${data.GHusername}/).
   `;
 }
 

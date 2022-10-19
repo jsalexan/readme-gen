@@ -1,4 +1,4 @@
-// TODO: Look up the names and addresses of the other licenses. 
+
 // TODO: Figure out how to include resource links.
 
 
@@ -22,11 +22,11 @@ const questions = [
       type: 'rawlist',
       name: 'license',
       message: 'Please choose your license for this application.',
-      choices: ['MIT', 'Apache_2.0', 'GPL_v2', 'BSD_3', 'ISC', 'none']
+      choices: ['MIT', 'ISC', 'UPL', 'none']
     },
     {
       type: 'input',
-      name: 'descrWhat',
+      name: 'descrGeneral',
       message: 'Please describe what your application does.', 
     },
     {
@@ -109,7 +109,7 @@ const questions = [
       type: 'checkbox',
       name: 'devices',
       message: 'This application will operate on the following devices.',
-      choices: ['- desktop', '- tablet', '- mobile']
+      choices: [' desktop', ' tablet', ' mobile']
     },
     { 
       type: 'input',
