@@ -1,8 +1,3 @@
-
-// TODO: Figure out how to include resource links.
-
-
-
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');

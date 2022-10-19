@@ -1,123 +1,75 @@
-# 09 Node.js Challenge: Professional README Generator
-
-## Your Task
-
-When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions&mdash;this last part increases the likelihood that other developers will contribute to the success of the project. 
-
-You can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.
-
-Your task is to create a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer/v/8.2.4). Review the [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide) as a reminder of everything that a high-quality, professional README should contain. 
-
-The application will be invoked by using the following command:
-
-```bash
-node index.js
-```
-
-Because this application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality. Revisit the Screencastify Tutorial in the prework as a refresher on how to record video from your computer. You’ll need to submit a link to the video _and_ add it to the README of your project.
+ # README Generator
 
 
-## User Story
+  ## Badges
+  ![badge](https://img.shields.io/badge/license-MIT-blue)
+  <br><br>
+  
 
-```md
-AS A developer
-I WANT a README generator
-SO THAT I can quickly create a professional README for a new project
-```
+  ## Description
+  This application allows any user to easily create a README file for their application. They simply answer the prompts and provide whatever information they like and the file is generated automatically. 
+  <br><br>
 
-## Acceptance Criteria
+  For my application, I used the following technologies: HTML, CSS, JavaScript, NodeJS, JSON, NPM, Inquirer, Git Bash, GitHub.
+  <br><br>
+  There were a few challenges in getting this the way I wanted it. I had the application itself running fairly quickly, but then when I attempted to integrate the starter code, it got a bit more challenging. After a lot of tinkering, I was able to get it all integrated. It was interesting thinking through the different ways I could use an app like this, as I regularly create README files. I was also deadset on finding a way to add a screenshot, so that was fun to figure out.
+  <br><br>
+  I would like to figure out how to add multiple links easier, like in the 3rd Party Application section. This might include a prompt asking if the user is done or if they'd like to add another link. I would also like to add the option to include other types of badges. 
+  <br><br>
 
-```md
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-WHEN I enter my project title
-THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
-```
+## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+  - [How to Contribute](#how-to-contribute)
+  - [Tests](#tests)
+  - [Questions](#questions)
+  <br><br>
 
-## Getting Started
+  ## [Installation](#table-of-contents)
+  The website is hosted by GitHub pages. <br>
+  You can find the video walkthrough it here: [README Generator Video](https://youtu.be/ENTfXwaCl2Y)
+  <br><br>
+  The repository is on GitHub: [GitHub repository for README Generator.](https://github.com/jsalexan/readme-gen) <br>
+  There you will find following file types: 
+   HTML, CSS, JavaScript, JSON, README, Images.
+  <br><br>
+  To install, please clone the files from the GitHub account provided. You'll need to be sure to have installed NodeJS and Inquirer.  <br><br>
 
-Here are some guidelines to help you get started:
+## [Usage](#table-of-contents)
+  The website (link above) was created to be used on the following devices:<br> 
+   desktop.<br><br>
+  Please refer to the video demonstration above for a thorough walkthough of the application. <br><br>
 
-* Create a `.gitignore` file and include `node_modules/` and `.DS_Store/` so that your `node_modules` directory isn't tracked or uploaded to GitHub. Be sure to create your `.gitignore` file before installing any npm dependencies.
+  ![Screen capture.](https://user-images.githubusercontent.com/110498167/196821748-0a744819-9320-4234-a673-84e97fbe6393.png)
+  <br><br>
 
-* Make sure that your repo includes a `package.json` with the required dependencies. You can create one by running `npm init` when you first set up the project, before installing any dependencies.
+  ## [Credits](#table-of-contents) 
+  I am grateful for the help of the Panic Problems study (support) group. I also received very helpful assistance from RMoore through the AskBCS Learning Assistant feature. Last, I am thankful for the assistance of my UW Full Stack Web Development Bootcamp instructors, teacher assistants, and fellow students.
+  <br><br>
 
-* Include a video of the typical user flow through your application. This includes views of the prompts and the responses after their selection.
+  **Third Party References and Tutorials used include:** 
+  <br>
+  ((https://www.markdownguide.org/cheat-sheet/) <br> (https://gist.github.com/qvil/5e3ed56c26d784e51424621119cc4028) <br> (https://www.youtube.com/watch?v=nvPOUdz5PL4) <br>(https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba) <br>(https://hashnode.com/post/getting-user-input-in-nodejs-using-inquirerjs-ckynrlihg05k7fms1b8677f5r) <br>(https://www.digitalocean.com/community/tutorials/nodejs-interactive-command-line-prompts))
+  <br><br>
 
-* Refer to the [Fullstack Blog Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) for additional guidance on creating a video.
+  
+  ## [License](#table-of-contents)
+  **MIT** Copyright 2022, Jennifer Alexander<br>
+  [Information about your MIT license.](https://opensource.org/licenses/MIT)
+  <br><br>
+  
 
-* Include any other screenshots you deem necessary to help someone who has never been introduced to your application understand the purpose and function of it. This is how you will communicate to potential employers or other developers in the future what you built and why, and to show how it works.
-:rat:
-## Grading Requirements
+  ## [How to Contribute](#table-of-contents)
+  At this time, we are not accepting collaborators. Thank you for your interest!
+  <br><br>
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+  ## [Tests](#table-of-contents)
+  Coming soon...
+  <br><br>
 
-This Challenge is graded based on the following criteria: 
+  ## [Questions](#table-of-contents)
+  If you have any questions or comments, please contact <br>Jennifer Alexander at jsa.wa.us@gmail.com <br>or visit my profile at [GitHub](https://github.com/jsalexan/).
 
-### Deliverables: 20%
-
-* A sample README generated using the application must be submitted.
-
-* Your GitHub repository containing your application code.
-
-### Walkthrough Video: 27%
-
-* A walkthrough video that demonstrates the functionality of the README generator must be submitted, and a link to the video should be included in your README file.
-
-* The walkthrough video must demonstrate how a user would invoke the application from the command line.
-
-* The walkthrough video must demonstrate how a user would enter responses to all of the prompts in the application.
-
-* The walkthrough video must demonstrate a generated README that matches the user input and has a functioning table of contents.
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-	* Uses the [Inquirer package](https://www.npmjs.com/package/inquirer/v/8.2.4).
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a high-quality README with description and a link to walkthrough video.
-
-
-## Review
-
-You are required to submit the following for review:
-
-* A walkthrough video demonstrating the functionality of the application.
-
-* A sample README.md file for a project repository generated using your application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
----
-
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+  

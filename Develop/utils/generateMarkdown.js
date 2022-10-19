@@ -1,6 +1,5 @@
 const fs = require('fs');
 
-
 // Function that adds a license badge. If there is no license, returns an empty string.
 function renderLicenseBadge(license) {
   if (license != 'none')
